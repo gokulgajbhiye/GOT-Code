@@ -1,0 +1,165 @@
+html, body{
+	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	outline: 0;
+	outline: none;
+}
+body {
+	text-align: center;
+	background: url(../img/bg-t.jpg) 0% 50%;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	outline: none;
+}
+
+.number {
+	color: orange;
+	font-weight: bold;
+	font-size: 30px;
+	margin: 20px 0;
+	outline: none;	
+}
+.number.ng-binding{
+/*	width: 400px;
+	height: 400px;*/
+	background: transparent url(../img/sheild-red.png) no-repeat center center;
+    font-size: 125px;
+    /*font-weight: bold;
+    padding-top: 35px;
+    padding-bottom: 35px;*/	
+    font-size: 85px;
+    /* background-size: contain; */
+}
+.nubActive{
+    padding: 30px 0px 50px 0px;
+    margin-bottom: -100px;	
+}
+.btn_1{
+	background: transparent url(../img/01.png) no-repeat center center;
+	width: 136px;
+	height: 136px;
+}
+.btn_2{
+	background: transparent url(../img/02.png) no-repeat center center;
+	width: 136px;
+	height: 136px;	
+}
+.btn_3{
+	background: transparent url(../img/03.png) no-repeat center center;
+	width: 136px;
+	height: 136px;	
+}
+.mar-top-70px{
+	margin-top: 50px;  
+}
+.mar-top-40px{
+	margin-top: 100px !important;  
+}
+.start-btn {
+	background: transparent url(../img/enter_button.gif) no-repeat center center;
+	height: 200px;
+	width: 200px;
+	border: 0px solid;
+	cursor: pointer;	
+}
+
+.text {
+	color: black;
+	font-size: 18px;
+	margin: 10px 20px;
+}
+
+.send-btn {
+	color: transparent;
+    background-color: transparent;
+    border-radius: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 20px;
+    border: 0px solid;
+    margin-right: 1px;
+    margin-top: 95px;
+    margin-left: 10px;
+    outline:none !important;
+}
+
+button, button:focus, button:hover, button:active{
+    outline:0 !important;
+    box-shadow: none !important;
+    outline-style: none !important;
+    outline-color: transparent; 
+    outline: -webkit-focus-ring-color auto 0px !important;
+    cursor: pointer;  
+}
+button:active, button:hover {
+	-webkit-stroke-width: 5.3px;
+      -webkit-stroke-color: #FFFFFF;
+      -webkit-fill-color: #FFFFFF;
+      text-shadow: 1px 0px 20px yellow;
+}
+.wrong-action {
+	color: red;
+}
+
+.won {
+    color: orange;
+    font-size: 30px;
+    font-weight: bold;
+    background: transparent url(../img/trophy.gif) no-repeat center bottom;
+    margin: auto;
+    margin-top: 10px;
+    min-height: 346px;
+}
+.wonText{
+	position: relative;	
+}
+.welcome{
+	padding-top: 50px;
+}
+
+/*For Mobile*/
+@media screen and (max-width: 768px){
+	.number.ng-binding{
+		background-size: 36%;
+	    font-size: 50px;
+	}
+	.nubActive {
+	    padding: 20px 0px 40px 0px;
+	    margin-bottom: -100px;
+	}
+	.send-btn{
+	    color: transparent;
+	    background-color: transparent;
+	    border-radius: 10px;
+	    font-size: 30px;
+	    font-weight: bold;
+	    padding: 0px;
+	    border: 0px solid;
+	    margin-right: 1px;
+	    margin-top: 70px;
+	    margin-left: 0px;
+	    background-size: 60%;
+	}
+	.mar-top-70px {
+	    margin-top: 10px;
+	}
+	.btn_1, .btn_2, .btn_3{
+	    width: 80px;
+	    height: 80px;
+	    margin-left: 0px;
+	    margin-right: 6px;
+	    background-size: 100%;
+	    margin-top: 100px;
+	}
+	.won{
+	    background-size: 30%;
+	    min-height: 232px;
+	}
+	.won img{
+	    width: 85%;
+	    margin-top: 24px;	
+	}
+}

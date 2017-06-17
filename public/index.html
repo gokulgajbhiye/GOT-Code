@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en" ng-app="GOTApp">
+	<head>
+		<meta charset="utf-8">
+		<title>GOT - Code Challenge</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="vendor/angular.min.js"></script>		
+		<script src="script/app.js"></script>
+		<script src="script/player-service.js"></script>
+		<script src="script/game-service.js"></script>
+		<script src="script/rest-call.js"></script>
+		<script src="script/main-controller.js"></script>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+	</head>
+	<body ng-controller="mainController as ctrl">
+		<div ng-hide="ctrl.game.ended">
+			<div class="number">{{ctrl.game.number}}</div>
+			<button class="start-btn mar-top-70px" ng-hide="ctrl.game.started" ng-click="ctrl.startGame()">
+				<!-- Start Game -->
+			</button>
+			<div class="text mar-top-40px" ng-show="!ctrl.player.myTurn && ctrl.game.started">
+				<img src="img/wn1.gif" class="img-responsive center-block" alt="">
+				<img src="img/wn3.gif" class="img-responsive center-block" alt="">
+			</div>
+			<div ng-show="ctrl.game.started && ctrl.player.myTurn">
+				<button class="send-btn btn_1" ng-click="ctrl.sendNumber(ctrl.game.number + 1)"></button>
+				<button class="send-btn btn_2" ng-click="ctrl.sendNumber(ctrl.game.number)"></button>
+				<button class="send-btn btn_3" ng-click="ctrl.sendNumber(ctrl.game.number - 1)"></button>
+				<div class="text wrong-action" ng-show="ctrl.wrongNumberChosen">
+					<img src="img/err.gif" class="img-responsive center-block" class="wonText" alt="">
+				</div>
+			</div>
+		</div>			
+		<div class="won" ng-show="ctrl.game.ended">
+			<img src="img/won.gif" alt="">
+		</div>
+	</body>
+</html>
